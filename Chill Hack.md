@@ -55,7 +55,8 @@ if(isset($_POST['command'])){
     ?> 
     <h2><style> h2{ color:blue;";?></h2 > { background-attachment: fixed; background-repeat: no-repeat; background-position: center center; background-image: url('images/blue_boy_typing_nothought.gif'); } </style> 
 } 
-?> </body> </html>```
+?> </body> </html>
+```
 
 pasemos con el segundo paso que es tener una shell 
 
