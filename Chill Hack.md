@@ -37,8 +37,7 @@ podemos hacer uso de separadores para evitar esto y ver que contenido tiene la m
 
 con l\s vemos que tiene un archivo.php con rev lo podemos leer aunque esta al reves podemos utilizar una pagina para tener el texto claro y ahi podemos ver las palabras blacklisteadas 
 
-
-<html> <body> <form method="POST"> 
+```html> <body> <form method="POST"> 
 <input id="comm" type="text" name="command" placeholder="Command"> 
 <button>button</button> </form> <?php 
 if(isset($_POST['command'])){ 
@@ -55,8 +54,8 @@ if(isset($_POST['command'])){
     echo shell_exec($cmd); 
     ?> 
     <h2><style> h2{ color:blue;";?></h2 > { background-attachment: fixed; background-repeat: no-repeat; background-position: center center; background-image: url('images/blue_boy_typing_nothought.gif'); } </style> 
-}
-
+} 
+?> </body> </html>```
 
 pasemos con el segundo paso que es tener una shell 
 
