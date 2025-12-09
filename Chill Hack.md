@@ -38,7 +38,25 @@ podemos hacer uso de separadores para evitar esto y ver que contenido tiene la m
 con l\s vemos que tiene un archivo.php con rev lo podemos leer aunque esta al reves podemos utilizar una pagina para tener el texto claro y ahi podemos ver las palabras blacklisteadas 
 
 
->lmth< >ydob< >"TSOP"=dohtem mrof< >"dnammoC"=redlohecalp "dnammoc"=eman "txet"=epyt "mmoc"=di tupni< >nottub/nottub< >mrof/< php?< ))]'dnammoc'[TSOP_$(tessi(fi { ;]'dnammoc'[TSOP_$ = dmc$ ;)dmc$," "(edolpxe = erots$ ;)'sl','hs','ssel','erom','3nohtyp','liat','daeh','tac','mr','lrep','php','hsab' ,'nohtyp' ,'cn'(yarra = tsilkcalb$ )++i$ ;)erots$(tnuoc?{ >1h/";der:roloc"=elyts 1h< >elyts< ydob { ;)'fig.detcirtser_ezis-ewEelbaresiMgniliaF/segami'(lru :egami-dnuorgkcab ;retnec retnec :noitisop-dnuorgkcab ;taeper-on :taeper-dnuorgkcab ;dexif :tnemhcatta-dnuorgkcab ;revoc :ezis-dnuorgkcab } >elyts/< ;nruter php?< } } } >2h/<>?;)dmc$(cexe_llehs ohce php?<>";eulb:roloc"=elyts 2h<>? >elyts< ydob { ;)'fig.thguohton_gnipyt_yob_eulb/segami'(lru :egami-dnuorgkcab ;retnec retnec :noitisop-dnuorgkcab ;taeper-on :taeper-dnuorgkcab ;dexif :tnemhcatta-dnuorgkcab ;revoc :ezis-dnuorgkcab } >elyts/< } php?< >? >ydob/< >lmth/<
+<html> <body> <form method="POST"> 
+<input id="comm" type="text" name="command" placeholder="Command">
+<button>button</button> </form> <?php 
+if(isset($_POST['command'])){ 
+    $cmd = $_POST['command']; 
+    $store = explode(" ", $cmd); 
+    $blacklist = array('nc', 'python', 'bash', 'php', 'perl', 'rm', 'cat', 'head', 'tail', 'python3', 'more', 'less', 'sh', 'ls'); 
+    for($i=0; $i<count($store); $i++){ 
+        if(in_array($store[$i], $blacklist)){ 
+            ?> 
+            <h1><style> h1{ color:red;"/h1> { background-attachment: fixed; background-repeat: no-repeat; background-position: center center; background-image: url('images/FailingMiserableEwe-size_restricted.gif'); } </style> 
+            <?php return; 
+        } 
+    } 
+    echo shell_exec($cmd); 
+    ?> 
+    <h2><style> h2{ color:blue;";?></h2 > { background-attachment: fixed; background-repeat: no-repeat; background-position: center center; background-image: url('images/blue_boy_typing_nothought.gif'); } </style> 
+} 
+?> </body> </html>
 
 
 pasemos con el segundo paso que es tener una shell 
